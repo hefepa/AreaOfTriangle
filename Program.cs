@@ -13,9 +13,10 @@ public class Calculations
 {
     public void Repeat()
     {
+        int counter = 0;
         const int divisor = 2;
         double result, triangleBase, triangleHeight;
-        while (true) //repeats process till input is valid
+        while (true && counter <= 2) //repeats process till input is valid
         {
             //catches invalid input
             try
@@ -34,8 +35,10 @@ public class Calculations
             {
                 Console.WriteLine("\tInvalid input. Kindly ennter a number ");
                 Console.WriteLine();
-
+                counter++;
+                Console.WriteLine("You are not entering a number. Try again");
             }
+
         }
     }
 }
